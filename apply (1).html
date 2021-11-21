@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Site made with Mobirise Website Builder v4.12.3, https://mobirise.com -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/royal-logo.jpeg" type="image/x-icon">
+    <meta name="description" content="">
+
+
+    <title>Apply</title>
+    <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: Roboto;
+            src: url('fonts/Roboto/Roboto.ttf');
+        }
+
+        @font-face {
+            font-family: Ubuntu;
+            src: url('fonts/Ubuntu/Ubuntu.ttf');
+        }
+		
+		.applyHeader1{
+		    background-color:#0000ff;
+		    color:yellow;
+		    border-radius:5px;
+		    margin:8px;
+		    text-align:center;
+		    font-size:1.4rem;
+		    font-weight:bold;
+		}
+		
+		.applyHeader2{
+		    background-color:#0000ff;
+		    color:yellow;
+		    border-radius:5px;
+		    margin:5px;
+		    text-align:center;
+		    font-size:1.2rem;
+		}
+		
+	</style>
+
+    <!--<script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("applyform").submit();
+        }
+    </script>-->
+    
+    
+	<script>
+		
+	    var rowCount=0;
+	    var errMessage;
+	    
+	    function reload(){
+	        /*var arrFields=new Array();
+	        arrFields=['appDate','startDate','socName','title','fname','sname','dob','aas','idnum','email','phone','mobile','streetaddress','suburb','region','po','dod','bankname','branchname','branchcode ','accname ','accnum ','acctype'];
+	        
+            for (var c = 0; c < arrFields.length; c++) {
+                container = document.getElementById(arrFields[c]);
+                content = container.innerHTML;
+                container.innerHTML= content; 
+            }
+	        
+           //this line is to watch the result in console , you can remove it later	
+            console.log("Refreshed"); */
+            
+            var container;
+            var content;
+            container = document.getElementById('appDate');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('startDate');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('socName');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('title');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('fname');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('sname');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('dob');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('aas');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('idnum');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('email');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('phone');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('mobile');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('streetaddress');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('suburb');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('region');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+           /* container = document.getElementById('po');
+            content = container.innerHTML;
+            container.innerHTML= content; */
+            
+            container = document.getElementById('dod');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('bankname');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('branchname');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('branchcode');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('accname');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('accnum');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            container = document.getElementById('acctype');
+            content = container.innerHTML;
+            container.innerHTML= content; 
+            
+            /*container = document.getElementById('doa');
+            content = container.innerHTML;
+            container.innerHTML= content;
+            
+            container = document.getElementById('declare');
+            content = container.innerHTML;
+            container.innerHTML= content;*/
+
+        }
+	    
+	    function validateData(){
+	        reload();
+	        var appDate = $('#appDate').val();
+		    var startDate = $('#startDate').val();
+			var socname = $('#socName').val();
+			var fname = $('#fname').val();
+			var sname = $('#sname').val();
+			var dob = $('#dob').val();
+			var aas = $('#aas').val();
+			var idnum = $('#idnum').val();
+			var email = $('#email').val();
+			var phone = $('#phone').val();
+			var mobile = $('#mobile').val();
+			var streetaddress = $('#streetaddress').val();
+			var suburb = $('#suburb').val();
+			var region = $('#region').val();
+			var po = $('#po').val();
+			var bankname = $('#bankname').val();
+			var branchname = $('#branchname').val();
+			var branchcode  = $('#branchcode').val();
+			var accname  = $('#accname').val();
+			var accnum  = $('#accnum').val();
+        
+          
+	        //doac, declarec
+			if (!$('#declare').is(":checked")){
+                $("#errMessage").html('<center>Please acknowledge the declaration before proceeding..</center>');
+    			$("#errMessage").css("display", "");
+    			return false;
+            }
+            /*if (!$('#doa').is(":checked") & po == 'Debit Order'){
+                    $("#errMessage").html('<center>Please consent to the debit order before proceeding.</center>');
+    			    $("#errMessage").css("display", "");
+    			    return false;
+                
+            }*/
+			if(appDate =='' | startDate =='' | socname =='' | fname =='' | sname =='' | dob =='' | aas =='' | idnum =='' | email =='' | phone =='' | mobile =='' | streetaddress =='' | suburb =='' | region =='')
+			{
+			    $("#errMessage").html('<center>One or more mandatory fields are missing. NB: All fields except dependents are mandatory.</center>');
+			    $("#errMessage").css("display", "");
+				return false;
+			}
+		    if(po == 'Debit Order' && (bankname =='' | accname ==''  | accnum ==''  | acctype =='')){
+			    $("#errMessage").html('<center>Debit Order payment requires bank details to be completed.</center>');
+    			$("#errMessage").css("display", "");
+    			return false;
+			}
+            //else{
+                return true;
+            //}
+
+	    }
+		
+		function checkTable() {
+
+			var arrHead = new Array();
+			arrHead = ['', 'Dependent Details']; // table headers.
+
+			var empTable = document.createElement('table');
+			empTable.setAttribute('id', 'dependentsTable');  // table id.
+			empTable.setAttribute('width', '100%'); 
+			empTable.setAttribute('font-family', 'calibri');
+			
+
+			var tr = empTable.insertRow(-1);
+
+			/*for (var h = 0; h < arrHead.length; h++) {
+				var th = document.createElement('th'); // the header object.
+				if(h==0)
+					{th.setAttribute('style','color:red; font-size:14pt;border-bottom: 1px solid silver; width:7%;');}
+				else
+					{th.setAttribute('style','color:red; font-size:14pt;border-bottom: 1px solid silver;width:17%;');}
+				th.innerHTML = arrHead[h];
+				tr.appendChild(th);		
+			}*/
+
+			var div = document.getElementById('dependentsDiv');
+			div.appendChild(empTable);    // add table to a container.
+			
+			//now make it invisible
+			var deps=document.getElementById('dependentsTable');
+			deps.style.display='none';
+		}
+		
+		function addRow() {
+			
+			if(rowCount>11)
+			{
+				alert('Maximum number of dependents reached','Dependents');
+				return;
+			}
+			
+			var title=document.getElementById('dep_title').value;
+			var nm=document.getElementById('dep_nm').value;
+			var sn=document.getElementById('dep_sn').value;
+			var dob=document.getElementById('dep_dob').value;
+			var idnum=document.getElementById('dep_id').value;
+			var relation=document.getElementById('dep_relation').value;
+			
+			if(dob=='')
+			{
+				var utc = new Date().toJSON().slice(0,10);//.replace(/-/g,'/');
+
+				dob = utc;
+			}
+			var arrCols = new Array();
+			arrCols = ['','Dependent Details']; // table headers.
+
+			var empTab = document.getElementById('dependentsTable');
+
+			var rowCnt = empTab.rows.length;    // get the number of rows.
+			var tr = empTab.insertRow(rowCnt); // table row.
+			tr = empTab.insertRow(rowCnt);
+
+			for (var c = 0; c < arrCols.length; c++) {
+				var td = document.createElement('td');          // TABLE DEFINITION.
+				
+				td.setAttribute('style','width:auto;cellpadding:10px;');				
+
+				td = tr.insertCell(c);
+
+				if (c == 0) {   // if its the first column of the table.
+					td.setAttribute('style','width:5rem;');
+					// add a button control.
+					var button = document.createElement('input');
+
+					// set the attributes.
+					button.setAttribute('type', 'button');
+					button.setAttribute('value', 'Remove');
+					button.setAttribute('text-align','right');
+					button.setAttribute('style','style=margin-top:0;width:5rem;height:2rem; color:yellow;background-color:steelblue;');
+
+					// add button's "onclick" event.
+					button.setAttribute('onclick', 'removeRow(this)');
+
+					td.appendChild(button);
+				}
+				else {
+					// the 2nd, 3rd and 4th column, will have textbox.
+					var depString="ID Number:  " + idnum + "  |  ";
+					depString+="DoB:  " + dob + "  |  ";
+					depString+="Full Name:  " + title + " " + nm + " " + sn + "  |  ";
+					depString+="Relationship:  " + relation ;
+
+					var ele = document.createElement('input');
+					ele.setAttribute('type', 'text');
+					ele.setAttribute('value', depString);
+					ele.setAttribute('text', depString);
+					ele.setAttribute('id', 'dependent'+rowCount);
+					ele.setAttribute('name', 'dependent'+rowCount);
+					ele.setAttribute('style','border:none;style=margin-top:0;float:left;width:100%;height:2rem; color:red;background-color:whitesmoke;');
+					//background-color:#eee;
+					td.appendChild(ele);
+				}
+
+			}
+			var x = document.getElementById('dependentsTable').rows.length;
+			
+			if (x>0)
+			{
+				//now make it invisible
+				rowCount+=1;				
+				var deps=document.getElementById('dependentsTable');
+				deps.style.display='';
+			}
+			else{
+				//now make it invisible
+				var deps=document.getElementById('dependentsTable');
+				deps.style.display='none';
+			}
+		}
+		
+		// function to delete a row.
+		function removeRow(oButton) {
+			var empTab = document.getElementById('dependentsTable');
+			empTab.deleteRow(oButton.parentNode.parentNode.rowIndex); // buttton -> td -> tr
+			
+			rowCount-=1;
+			if(rowCount==0)
+			{
+				var deps=document.getElementById('deps');
+				deps.style.display='none';
+			}
+							
+			/*var x = document.getElementById('dependentsTable').rows.length;
+			if (x>2)
+			{
+				//now make it invisible
+				var deps=document.getElementById('deps');
+				deps.style.display='';
+			}
+			else{
+				//now make it invisible
+				var deps=document.getElementById('deps');
+				deps.style.display='none';
+			}*/
+		}
+
+		// function to extract and submit table data.
+		function submit() {
+			var myTab = document.getElementById('dependentsTable');
+			var arrValues = new Array();
+
+			// loop through each row of the table.
+			for (row = 1; row < myTab.rows.length - 1; row++) {
+				// loop through each cell in a row.
+				for (c = 0; c < myTab.rows[row].cells.length; c++) {
+					var element = myTab.rows.item(row).cells[c];
+					if (element.childNodes[0].getAttribute('type') == 'text') {
+						arrValues.push("'" + element.childNodes[0].value + "'");
+					}
+				}
+			}
+			
+			// finally, show the result in the console.
+			console.log(arrValues);
+		}
+</script>
+
+</head>
+
+<body onload="checkTable()">
+    <section class="menu cid-s1C5nbxfIs" once="menu" id="menu2-0">
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="index.html">
+                            <img src="assets/images/royal-logo.jpeg" alt="Mobirise" title="" style="height: 6rem;">
+                        </a>
+                    </span>
+
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item">
+                        <a class="nav-link link text-success display-4" href="index.html">
+                            Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-success display-4" href="about.html">
+                            About Us</a></li>
+                    <li class="nav-item"><a class="nav-link link text-success display-4" href="services.html">
+                            Services</a></li>
+                    <li class="nav-item"><a class="nav-link link text-success display-4" href="products.html">
+                            Products</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-success display-4" href="tombstones.html">
+                            Tombstones</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link link text-success display-4" href="gallery.html">
+                            Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link link text-success display-4" href="contact.html">
+                            Contacts Us</a></li>
+                </ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="https://www.facebook.com/royalqualityservice">
+
+                        f</a></div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="engine"></section>
+
+	<form id="apply" class="form-group" action="mailer/send_email_form.php" method="POST" onsubmit="return validateData();">
+
+        <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);">
+        </div>
+
+        <div style="font-family: Ubuntu;" class="container">
+            <div class="media-container-column mbr-white col-lg-12 col-md-12">
+                <h2 style="margin-top: 4rem;" class="mbr-section-title align-left mbr-bold pb-3 mbr-fonts-style display-2 text-primary">
+                    </h2>
+                <a style="margin-top: 2rem;" href="#self"></a>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="applyHeader1">
+                            MEMBERSHIP APPLICATION FORM - LIFE ASSISTANCE
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">                        
+                            <div class="card-body">
+
+                                <h6 style="font-family: Ubuntu;color:navy;">Application Date:</h6>
+								<input style="font-size: 13px;" class="form-control" type="date" name="appDate" id="appDate" placeholder="Application Date">
+
+                            </div>
+                        
+                    </div>
+					
+					<div class="col-sm-3">
+                       
+                            <div class="card-body">
+
+                               <h6 style="font-family: Ubuntu;color:navy;">Membership Start Date:</h6>
+								<input style="font-size: 13px;" class="form-control" type="date" name="startDate" id="startDate" placeholder="Membership Start Date">
+
+                            </div>
+                        
+                    </div>
+
+                    <div class="col-sm-3">
+                        
+                            <div class="card-body">
+
+                                <input style="font-size: 13px; visibility:hidden;" class="form-control" type="text" name="dummy"  placeholder="          ">
+
+                            </div>
+                        
+                    </div>
+
+                    <div class="col-sm-3">
+                        
+                            <div class="card-body">
+
+                                <input style="font-size: 13px; visibility:hidden;" class="form-control" type="text" name="dummy2"  placeholder="          ">
+
+                            </div>
+                       
+                    </div>
+
+                    
+					
+                    <!-- second row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					<div class="col-sm-12">
+                        <div class="applyHeader2">
+                            SECTION A: Personal Details of the Main Member:
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Society Name:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="socName" id="socName"  placeholder="Society Name">
+		
+                            </div>
+                    
+                    </div>
+					<div class="col-sm-4">
+                        
+                            <div class="card-body">
+								
+                            </div>
+                    
+                    </div>
+					<div class="col-sm-4">
+                        
+                            <div class="card-body">
+								
+                            </div>
+                    
+                    </div>
+
+					`<!--new row-->
+					<div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Title:</h6>
+								<select title="Title" name="title" id="title" style="font-size: 13px;" class="form-control">
+									<option value="Mr" selected>Mr</option>
+									<option value="Mrs">Mrs</option>
+									<option value="Mrs">Ms</option>
+									<option value="Dr">Dr</option>
+									<option value="Prof">Prof</option>
+									<option value="Rev">Rev</option>
+									<option value="Ps">Ps</option>
+									<option value="Fr">Fr</option>
+								</select>
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">First Name(s):</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="fname" id="fname"  placeholder="First Name(s)">								
+		
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Surname:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="sname" id="sname"  placeholder="Surname">
+		
+                            </div>   
+                    </div>
+					
+					                    <!-- third row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Date of Birth:</h6>
+								<input style="font-size: 13px;" class="form-control" type="date" name="dob" id="dob"  placeholder="Date of Birth">
+		
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Age at Start:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="aas" id="aas"  placeholder="Age at Start">								
+		
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">ID Number:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="idnum" id="idnum"  placeholder="ID Number">
+
+                            </div>
+                    </div>
+
+                    
+					<!-- fourth row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Email Address:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="email" id="email"  placeholder="Email Address">
+
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Work Telephone:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="phone" id="phone"  placeholder="Telephone">								
+							
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Cellphone:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="mobile" id="mobile"  placeholder="Cellphone">	
+
+                            </div>
+                    </div>
+
+                    
+					<!-- fifth row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Street Address:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="streetaddress" id="streetaddress"  placeholder="Street Address">
+
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Suburb:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="suburb" id="suburb"  placeholder="Suburb">								
+							
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Region:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="region" id="region"  placeholder="Region">	
+
+                            </div>
+                    </div>
+
+                   					
+					<!-- SECTION B-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					<div class="col-sm-12">
+                        <div class="applyHeader2">
+                            SECTION B: Personal Details of the dependents covered under the main member included in the premium:
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Title:</h6>
+								<select title="Title" id="dep_title" style="font-size: 13px;" class="form-control">
+									<option value="Mr" selected>Mr</option>
+									<option value="Mrs">Mrs</option>
+									<option value="Mrs">Ms</option>
+									<option value="Dr">Dr</option>
+									<option value="Prof">Prof</option>
+									<option value="Rev">Rev</option>
+									<option value="Ps">Ps</option>
+									<option value="Fr">Fr</option>
+								</select>
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">First Name(s):</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" id="dep_nm" name="dep_nm" placeholder="First Name(s)">								
+						
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Surname:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" id="dep_sn" name="dep_sn" placeholder="Surname">
+						
+                            </div>
+                    </div>
+
+                   					
+					<!-- second row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Date of Birth:</h6>
+								<input style="font-size: 13px;" class="form-control" type="date" id="dep_dob" name="dep_dob" placeholder="Date of Birth">
+							
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">ID Number:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" id="dep_id" name="dep_id" placeholder="ID Number">
+							
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Relationship to Main Member:</h6>
+								<select title="Title" id="dep_relation" name="dep_relation" style="font-size: 13px;" class="form-control">
+										<option value="Child" selected>Child</option>
+										<option value="Spouse">Spouse</option>
+										<option value="Sibling">Sibling</option>
+										<option value="Cousin">Cousin</option>
+										<option value="Parent">Parent</option>
+										<option value="Grandparent">Grandparent</option>
+								</select>
+								<button type="button" style="border:none;margin-top:0.4rem;float:right;width:5rem;height:3rem; color:yellow;background-color:steelblue;" id="btnAddRow" onclick="addRow()">Add</button>
+							
+                            </div>
+                    </div>
+
+                    										
+                    <!-- dependents table-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+
+					<div class="col-sm-12">
+                      <div style="margin-left: 1.5rem; margin-right:1.5rem; " id="dependentsDiv">
+					  
+					  </div>
+                    </div>
+
+					<!-- SECTION C-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					<div class="col-sm-12">
+                        <div class="applyHeader2">
+                            SECTION C: Payment Details:
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Preferred Payment Option:</h6>
+								<select title="Title" id="po" name="po" style="font-size: 13px;" class="form-control">
+								  <option value="Cash">Cash</option>
+								  <option value="Debit Order" selected>Debit Order</option>
+								  <option value="EFT">EFT</option>
+								</select>
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6> -</h6>
+								<h6  style="font-family:calibri;color:red;">Please complete the rest of this  section <br>if preferred payment option is debit order</h6>								
+					
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Debit Order Date:</h6>
+								<select title="Title" id="dod" name="dod" style="font-size: 13px;" class="form-control">
+								  <option value="" selected></option>
+								  <option value="1">1</option>
+								  <option value="15">15</option>
+								  <option value="16">16</option>
+								  <option value="25">25</option>
+								  <option value="Last Day of Month">Last Day of Month</option>
+								</select>
+                            </div>
+                    </div>
+
+                   					
+					<!-- second row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Bank Name:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="bankname"  id="bankname"  placeholder="Bank Name">								
+							
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Branch Name:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="branchname" id="branchname"  placeholder="Branch Name">								
+							
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Branch Code:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="branchcode" id="branchcode"  placeholder="Branch Code">	
+							
+                            </div>
+                    </div>
+					
+					<!-- second row starts here-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					
+                    <div class="col-sm-4">
+                        
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Account Name:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="accname" id="accname"  placeholder="Account Name">								
+							
+                            </div>
+                    
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Account Number:</h6>
+								<input style="font-size: 13px;" class="form-control" type="text" name="accnum" id="accnum"  placeholder="Account Number">								
+							
+                            </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                            <div class="card-body">
+								<h6 style="font-family: Ubuntu;color:navy;">Account Type:</h6>
+								<select title="Title" id="acctype" name="acctype" style="font-size: 13px;" class="form-control">
+								  <option value="" selected></option>
+								  <option value="Cheque">Cheque</option>
+								  <option value="Savings">Savings</option>
+								  <option value="Transmission">Transmission</option>
+								</select>
+							</div>
+                    </div>
+					
+					<!-- dependents table-->
+                    <div style="margin-top: 1rem; width: 100%;">
+
+                    </div>
+					<div class="col-sm-12">
+                        <div class="applyHeader2">
+                            SECTION D: Authorisations:
+                        </div>>
+                    </div>
+					<div class="col-sm-12">
+                      <div style="margin-left: 1.5rem; margin-right:1.5rem; ">
+							<table width="100%">
+								<tr>
+									<td margin-top="0" style="vertical-align:top;">
+										<input type="checkbox" id="doa" name="doac"><font face="calibri" size=2 color="navy"></font></input>
+									</td>
+									<td>
+										<h7  style="font-family:calibri;color:red;">I do hereby authorise Royal Funerals to debit my account</h7>	
+									</td>
+								</tr>
+								<tr>
+									<td margin-top="0" style="vertical-align:top;">
+										<input type="checkbox" id="declare" name="declarec"><font face="calibri" size=2 color="navy" vertical-align="top"></font></input>
+									</td>
+									<td>
+										<h7  style="font-family:calibri;color:red;">
+											I do hereby apply for membership on the Master Policy held by Royal Funeral Services for the cover contained in this document and I declare <br>
+											that I have not withheld any material information. I accept that this application and the declaration shall be the basis of the Membership <br>
+											Contract between Royal Funeral Serveices and myself. I understand that any inaccurate or untrue statement may render my membership null <br>
+											and void and all premiums paid will be forefeited to Royal Funeral Services. I confirm that the representative explained the terms and <br>
+											conditions contained in the Membership Certificate to me and that I accept these terms. The underwriter reserves the right to decline this <br>
+											application within 30 days of signature. Should you receive no formal communication stating that the application has been declined within <br>
+											30 days, the membership may be considered active and binding. I understand that subject to Underwriter approval, the membership will only <br>
+											come into effect after Royal Funeral Services has received the 1st premium payable.
+										</h7>
+									</td>
+								</tr>
+							</table>
+					  </div>
+					 </div> 
+					 <!--Submit-->
+					 <div class="col-sm-12">
+						<div style="margin-left: 1.5rem; margin-right:1.5rem; ">
+						    <table width="100%">
+						        <tr>
+						            <td style="width:50%;">
+						                <input type="button" style="font:family:calibri;width:6rem;" onclick="window.history.back();" class="btn btn-sm btn-primary" value="Back"></input>
+						            </td>
+						            <td>
+						                <button  type="submit" style="border:none;margin-top:0.4rem;float:right;width:6rem;height:2.8rem; color:white;background-color:green;border-radius:5px;font-family: calibri;" id="btnAddRow">Apply</button>
+						            </td>
+						        </tr>
+						    </table>
+						</div>
+					</div>
+					
+					 <!--Error Display-->
+					 <div class="col-sm-12">
+						<div style="margin-left: 1.5rem; margin-right:1.5rem; ">
+							<label id="errMessage"  style="border:none;margin-top:0.4rem;width:100%;height:2rem; color:white;background-color:red;display:none;"></label>
+						</div>
+					</div>
+                    
+                </div>
+            </div>
+		</div>
+
+	</form>
+   
+	
+    <div style="height: 70px;" class="footer bg-primary">
+        <div style="width: 80%; margin-left: auto; margin-right: auto; text-align: center; font-size: 14px; font-family: Ubuntu;">
+            <br>
+            <p class="text-light">Copyright &copy 2020 - <a style="margin-left: .5rem;" class="text-light" href=""><i class="fab fa-instagram"></i></a> <a style="margin-left: .5rem;" class="text-light" href=""><i class="fab fa-twitter"></i></a></p>
+        </div>
+    </div>	
+
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/popper/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/dropdown/js/nav-dropdown.js"></script>
+    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+    <script src="assets/parallax/jarallax.min.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+-->
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+C:\Users\ivan\Downloads\Absa.pdf-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <script>
+        var paramCounter=0;
+        var file_path='';
+        var typ=param='';
+        
+        const params = new URLSearchParams(window.location.search)
+        for (const param of params) {
+            if(paramCounter==0){
+                file_path=param[1];
+            }
+            if(paramCounter==1){
+                typ=param[1];
+            }
+            alert(param[1]);
+            
+            if (typ=='PDF')
+            {
+                window.onload = function() {
+                    //document.getElementById("render").innerHTML="<center><embed src='" + file_path + "' type='application/pdf' style='height: 95vh; width:80vw;'></center>";
+                    document.getElementById("render").innerHTML="<iframe style='width: 900px; height: 900px;' src='http://docs.google.com/gview?url=" + file_path + "&embedded=true' height='240' width='320' frameborder='1'></iframe>";
+                } 
+            }
+            if (typ=='DOC')
+            {
+                window.onload = function() {
+                    //document.getElementById("render").innerHTML="<center><embed src='" + file_path + "' type='application/msword' style='height: 95vh; width:80vw;'></center>";
+                    document.getElementById("render").innerHTML="<iframe style='width: 900px; height: 900px;' src='http://docs.google.com/gview?url=" + file_path + "&embedded=true' height='240' width='320' frameborder='1'></iframe>";
+                } 
+            }
+            paramCounter++;
+        }
+    </script>
+    <body>
+       <div id="render">
+           This is a test
+       </div>
+        
+    </body>
+</html>
